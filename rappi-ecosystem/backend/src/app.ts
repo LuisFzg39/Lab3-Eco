@@ -28,6 +28,10 @@ app.use('/stores', storesRouter);
 app.use('/products', productsRouter);
 app.use('/orders', ordersRouter);
 
+app.get('/', (_req: Request, res: Response) => {
+    res.status(200).json({ message: 'Welcome to the Rappi Ecosystem API!' });
+});
+
 // ─── 404 Handler ─────────────────────────────────────────────────────────────
 app.use((_req: Request, res: Response) => {
     res.status(404).json({ error: 'Route not found' });
