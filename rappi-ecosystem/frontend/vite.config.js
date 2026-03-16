@@ -3,6 +3,7 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
     build: {
+        target: 'esnext', // Fixes 'Unexpected token export' by using modern target
         rollupOptions: {
             input: {
                 // Multi-page app configuration so Vite builds all three clients

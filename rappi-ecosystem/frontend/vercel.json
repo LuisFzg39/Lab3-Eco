@@ -1,0 +1,17 @@
+{
+    "cleanUrls": true,
+    "rewrites": [
+        {
+            "source": "/",
+            "destination": "/consumer-app/index.html"
+        },
+        {
+            "source": "/store",
+            "destination": "/store-app/index.html"
+        },
+        {
+            "source": "/delivery",
+            "destination": "/delivery-app/index.html"
+        }
+    ]
+}
