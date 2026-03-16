@@ -1,4 +1,4 @@
-const API_BASE = 'http://localhost:3000';
+import { API_BASE } from '../api.js';
 
 let currentUser = null;
 let currentStoreViewing = null;
