@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Store Dashboard – Rappi</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>🏪 Store Dashboard</h1>
+            <p id="storeStatus">Loading user...</p>
+        </div>
+        <button id="logoutBtn" class="hidden">Logout</button>
+    </header>
+
+    <main>
+        <!-- LOGIN VIEW -->
+        <section id="loginView">
+            <h2>Login (Store Owner)</h2>
+            <form id="loginForm">
+                <input type="email" id="email" placeholder="Email" required />
+                <input type="password" id="password" placeholder="Password" required />
+                <button type="submit">Login</button>
+            </form>
+            <div id="loginError" style="color: red; margin-top: 10px;"></div>
+        </section>
+
+        <!-- DASHBOARD VIEW -->
+        <div id="dashboardView" class="hidden">
+
+            <section>
+                <h2>Store Controls</h2>
+                <div id="storeInfo"></div>
+                <button id="toggleStoreBtn" style="margin-top: 1rem;">Toggle Open/Closed</button>
+            </section>
+
+            <section>
+                <h2>Add Product</h2>
+                <form id="productForm">
+                    <input type="text" id="prodName" placeholder="Product Name" required />
+                    <input type="number" id="prodPrice" placeholder="Price (integer)" required min="1" />
+                    <button type="submit">Add Product</button>
+                </form>
+            </section>
+
+            <section>
+                <h2>My Products</h2>
+                <div id="productsList">Loading products...</div>
+            </section>
+
+            <section>
+                <h2>Store Orders (Coming Soon)</h2>
+                <p>This backend endpoint wasn't requested yet, but can be added later.</p>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
